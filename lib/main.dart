@@ -1,23 +1,13 @@
 import 'package:flutter/material.dart';
+import 'gradient_container.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Colors.blue,
-              Colors.yellow,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
-        child: const Center(
-          child: Text('Glory to Heroes!'),
-        ),
-      ),
+      body: GradientContainer([
+        Color.fromARGB(255, 5, 136, 243),
+        Color.fromARGB(255, 245, 221, 6),
+      ]),
     ),
   ));
 }
